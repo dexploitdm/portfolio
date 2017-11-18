@@ -1,0 +1,205 @@
+@import '../../style-config.scss';
+
+// PAGE LAYOUT ************
+
+.page-wrapper {
+  background-color: $light-grey-background;
+  border: 1px solid $light-grey-background;
+  min-height: 70vh;
+}
+
+.portfolio-content,
+.search-input-wrapper {
+  max-width: $max-content-width;
+  width: 80%;
+  margin: 0 auto;
+  transition: width 300ms;
+  // margin-bottom: 30px;
+  // border: 1px dotted red;
+}
+
+// SEARCH INPUT ************
+
+.search-input-wrapper {
+  position: relative;
+  // border: 1px dotted lightgreen;
+}
+
+.search-input {
+  height: 46px;
+  font-size: 1.2em;
+  border-radius: 10px;
+  padding: 10px;
+  padding-left: 44px;
+  width: 500px;
+  margin-top: 50px;
+  border: 1px solid $highlight-color;
+  transition: box-shadow 400ms;
+  &:focus {
+    box-shadow: 0 0 1px 1px $highlight-color;
+    outline: none;
+  }
+}
+
+.search-icon {
+  position: absolute;
+  top: 64px;
+  left: 16px;
+  font-size: 1.2em;
+}
+
+.search-result {
+  color: #444;
+  font-style: italic;
+  padding: 7px;
+
+}
+
+// PROJECT CARD ************
+
+.project-card {
+  background-color: #fff;
+  border-radius: 5px;
+  margin-top: 50px;
+  padding: 30px;
+  width: 100%;
+  box-shadow: 2px 2px 4px #444;
+  &:first-child {
+    margin-top: 30px;
+  }
+  &:last-child {
+    margin-bottom: 100px;
+  }
+}
+
+.project-heading {
+  margin-bottom: 10px;
+  font-size: 2.2em;
+  color: $highlight-color;
+}
+
+.project-tech {
+  font-size: 0.9em;
+  letter-spacing: 2px;
+  color: #444;
+  margin-bottom: 10px;
+  background-color: $light-grey-background;
+  padding: 8px;
+  border-radius: 3px;
+}
+
+.project-columns {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0 30px 0;
+}
+
+.project-image-column {
+  float: left;
+}
+
+.project-text-column {
+  // border: 1px dotted blue;
+  float: left;
+  margin: 0 20px 0 20px;
+}
+
+.project-image {
+  width: 300px;
+  border-radius: 3px;
+  transition: width 300ms;
+}
+
+// this paragraph sits next to the image
+.project-text {
+  line-height: $tall-line-height;
+}
+
+.project-list {
+  line-height: $tall-line-height;
+}
+
+.project-list-item {
+  list-style-type: square;
+}
+
+// STATS ********************
+
+.project-stat-wrapper {
+  background-color: $light-grey-background;
+  // padding: 4px 4px 10px 4px;
+  padding: 10px 15px 10px 15px;
+  margin-top: 20px;
+  border-radius: 3px;
+  // margin-left: 12px;
+}
+
+.project-stat {
+  font-weight: bold;
+  font-size: 0.9em;
+  letter-spacing: 2px;
+  line-height: 2.2em;
+  // margin-top: 12px;
+  // margin-left: 12px;
+  // color: red;
+}
+
+.project-stat-badge {
+  background-color: $highlight-color;
+  padding: 3px 8px 3px 8px;
+  border-radius: 10px;
+  color: white;
+  font-size: 0.9em;
+  text-align: right;
+}
+
+// LINKS ********************
+
+.project-links-wrapper {
+  // flex-direction: row;
+  margin-left: 320px;
+}
+
+.project-link {
+  @include project-button-link();
+  // @include project-buttons($highlight-color);
+  // text-decoration: none;
+  // font-weight: 500;
+  // float: right;
+}
+
+.project-link-icon {
+  font-size: 1.2em;
+}
+
+// MEDIA QUERIES
+// *********************************************
+
+@media (max-width: 930px) {
+
+  .portfolio-content,
+  .search-input-wrapper {
+    width: 95%;
+  }
+
+  .project-image {
+    width: 200px;
+  }
+
+  .project-links-wrapper {
+    margin-left: 220px;
+  }
+
+}
+
+@media (max-width: 595px) {
+  .project-image-column {
+    display: none;
+  }
+
+  .project-links-wrapper {
+    margin-left: 20px;
+  }
+}
+
+

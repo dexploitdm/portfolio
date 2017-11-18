@@ -1,0 +1,42 @@
+$max-content-width: 1000px;
+// $highlight-color: #f92561;
+$highlight-color: #f58008;
+// $light-grey-background: #ddd;
+$light-grey-background: #ededed;
+
+$tall-line-height: 1.8em;
+
+@mixin project-buttons($colour) {
+  background-color: #FFF;
+  color: #222;
+  letter-spacing: 1px;
+  font-size:  0.9rem;
+  display: inline-block;
+  padding: 8px 12px 8px 12px;
+  border: 2px solid $colour;
+  border-radius: 3px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  font-weight: 500;
+  -webkit-transition: background-color 300ms;
+  transition: background-color 300ms;
+  &:hover {
+    cursor: pointer;
+    background-color: $highlight-color;
+  }
+}
+
+@mixin project-button-link() {
+  @include project-buttons($highlight-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+@mixin project-links() {
+  color: $highlight-color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}

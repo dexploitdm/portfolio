@@ -1,0 +1,56 @@
+@import '../../style-config.scss';
+
+.banner-content {
+  max-width: $max-content-width;
+  margin: 0 auto;
+}
+
+.skills-section {
+  display: flex;
+  flex-direction: row;
+  max-width: $max-content-width;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  // border: 1px dotted blue;
+}
+
+.portfolio-section {
+  width: 100%;
+  background-color: $light-grey-background;
+  // to cover a mysterious gap
+  margin-bottom: -30px;
+  overflow: auto;
+}
+
+.portfolio-content {
+  max-width: $max-content-width;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  &:last-child {
+    margin-bottom: 100px;
+  }
+}
+
+// MEDIA QUERIES
+// *********************************************
+
+@media (max-width: 890px) {
+
+  .banner-content {
+    width: 95%;
+  }
+
+  .skills-section {
+    flex-direction: column;
+  }
+
+  .portfolio-content {
+    width: 95%;
+  }
+}
+
+

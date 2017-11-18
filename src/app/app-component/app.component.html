@@ -1,0 +1,67 @@
+<header
+  class="header"
+  id="header">
+
+  <div class="header-content">
+
+    <nav class="titlebar">
+      <img class="titlebar-logo" src="../assets/images/logo5.png" routerLink="/overview">
+      <ul class="titlebar-list">
+        <li class="titlebar-list-item">
+          <a class="titlebar-anchor" routerLink="/overview" routerLinkActive="titlebar-list-item_selected">Главная</a>
+        </li>
+        <li class="titlebar-list-item">
+          <a class="titlebar-anchor" routerLink="/portfolio" routerLinkActive="titlebar-list-item_selected">Портфолио</a>
+        </li>
+        <li class="titlebar-list-item">
+          <a class="titlebar-anchor" routerLink="/skills" routerLinkActive="titlebar-list-item_selected">Обо&nbsp;мне</a>
+        </li>
+      </ul>
+    </nav>
+
+
+  </div>
+  <!-- header content -->
+</header>
+
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
+
+<footer class="footer">
+  <div class="footer-content-wrapper">
+    <div class="footer-column footer-bio-wrapper">
+      <h3 class="footer-heading">Дмитрий паршаков</h3>
+      <p class="footer-text">Проект на Angular CLI</p>
+      <p class="footer-text">Реализовано: 2018.</p>
+    </div>
+
+    <div class="footer-column footer-contacts-wrapper">
+      <h3 class="footer-heading">Связь со мной</h3>
+      <a class="footer-link" target="_blank" href="https://github.com/dexploitdm">Github
+        <i class="footer-icon-link fa fa-github" aria-hidden="true"></i>
+      </a><br>
+      <a class="footer-link" target="_blank" href="https://app.pluralsight.com/profile/alistair-willis">
+        Pluralsight
+      </a><br>
+      <a class="footer-link" target="_blank" href="https://www.codewars.com/users/ARWL2016">
+        Codewars <img src="https://www.codewars.com/users/ARWL2016/badges/micro">
+      </a>
+    </div>
+
+    <div class="footer-column footer-links-wrapper">
+      <h3 class="footer-heading footer-link" (click)="scrollToTop()">Наверх</h3>
+      <hr class="footer-line">
+      <h3 class="footer-heading footer-link" (click)="navigateTo('/overview')">Главная</h3>
+      <!-- <p class="footer-text">See an overview of my projects and link to live websites and the source code.</p> -->
+
+      <h3 class="footer-heading footer-link" (click)="navigateTo('/portfolio')">Портфолио</h3>
+      <!-- <p class="footer-text">See an overview of my projects and link to live websites and the source code.</p> -->
+
+      <h3 class="footer-heading footer-link" (click)="navigateTo('/skills')">Умения</h3>
+      <!-- <p class="footer-text">Get a summary of my technical skills and read about my coding philosophy.</p> -->
+    </div>
+  </div>
+
+</footer>
+
